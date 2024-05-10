@@ -97,6 +97,8 @@ function myFetch() {
     return planets[index];
  }
  
+//enabled actions
+
  module.exports.addDestinationInfo = addDestinationInfo;
  module.exports.validateInput = validateInput;
  module.exports.formSubmission = formSubmission;
