@@ -78,7 +78,7 @@ function addDestinationInfo(document, name, diameter, star, distance, moons, ima
     if (readyForLaunch) {
         launchStatus.innerHTML = "Shuttle is ready for launch";
         launchStatus.style.color = "green";
-        faultyItems.style.visibility = "hidden";
+        faultyItems.style.visibility = "visible";
     } else {
         launchStatus.innerHTML = "Shuttle not ready for launch";
         launchStatus.style.color = "red";
