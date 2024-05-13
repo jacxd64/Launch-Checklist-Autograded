@@ -52,8 +52,8 @@ function addDestinationInfo(document, name, diameter, star, distance, moons, ima
     let fuelLevelNum = Number(fuelLevel);
     let cargoMassNum = Number(cargoMass);
 
-    document.getElementById("pilotStatus").innerHTML = `Pilot ${pilot} is ready`;
-    document.getElementById("copilotStatus").innerHTML = `Co-pilot ${copilot} is ready`;
+    document.getElementById("pilotStatus").innerHTML = `Pilot ${pilot} is ready for launch`;
+    document.getElementById("copilotStatus").innerHTML = `Co-pilot ${copilot} is ready for launch`;
 
     let readyForLaunch = true;
     let launchStatus = document.getElementById("launchStatus");
@@ -69,18 +69,18 @@ function addDestinationInfo(document, name, diameter, star, distance, moons, ima
     }
 
     if (cargoMassNum > 10000) {
-        cargoStatusElement.innerHTML = "Cargo mass too high for launch";
+        cargoStatusElement.innerHTML = "Cargo mass too heavy for launch";
         readyForLaunch = false;
     } else {
         cargoStatusElement.innerHTML = "Cargo mass low enough for launch";
     }
 
     if (readyForLaunch) {
-        launchStatus.innerHTML = "Shuttle is ready for launch";
+        launchStatus.innerHTML = "Shuttle is Ready for Launch";
         launchStatus.style.color = "green";
         faultyItems.style.visibility = "visible";
     } else {
-        launchStatus.innerHTML = "Shuttle not ready for launch";
+        launchStatus.innerHTML = "Shuttle Not Ready for Launch";
         launchStatus.style.color = "red";
         faultyItems.style.visibility = "visible";
     }
@@ -97,6 +97,8 @@ function myFetch() {
     return planets[index];
  }
  
+
+
 //enabled actions
 
  module.exports.addDestinationInfo = addDestinationInfo;
